@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Nagare - DevOps Intern Portfolio (DEVOPS)</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        h2 {
-            margin-top: 20px;
-            font-size: 1.5em;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li::before {
-            content: "•";
-            margin-right: 10px;
-            color: #007bff;
-        }
-
-        .project {
-            margin-bottom: 20px;
-        }
-
-        .project b {
-            color: #007bff;
-        }
-
-        .contact {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .contact a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta name="description" content="Om Nagare's DevOps portfolio showcasing skills, projects, and contact information.">
+    <meta name="keywords" content="DevOps, Portfolio, Om Nagare, Docker, Kubernetes, Jenkins, AWS, Ansible, Terraform, React, Next.js">
+    <meta name="author" content="Om Nagare">
+    <title>Om Nagare - DevOps Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Om Nagare</h1>
-        <p>DevOps Enthusiast</p>
+
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 top-0 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-blue-600 dark:text-white">Om Nagare</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Contact</a>
+                    <button id="themeSwitcher" class="text-gray-700 dark:text-gray-300 focus:outline-none" onclick="toggleTheme()">🌙</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-24">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-5xl font-bold">Om Nagare</h1>
+            <p class="mt-4 text-2xl">DevOps Engineer & Cloud Specialist</p>
+            <p class="mt-4 text-lg">Creating scalable and efficient infrastructure solutions with AWS, Docker, Kubernetes, and CI/CD tools.</p>
+        </div>
     </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>I am a passionate DevOps enthusiast currently looking for an internship to further enhance my skills and knowledge in the field. I have a strong foundation in various DevOps tools and technologies, including Docker, Kubernetes, Jenkins, and AWS.</p>
 
-        <h2>Skills</h2>
-        <ul>
-            <li>Containerization (Docker)</li>
-            <li>Container Orchestration (Kubernetes)</li>
-            <li>Continuous Integration/Continuous Deployment (Jenkins)</li>
-            <li>Cloud Computing (AWS)</li>
-            <li>Infrastructure as Code (Terraform)</li>
-        </ul>
+    <!-- Main Content -->
+    <main class="mt-16">
+        <!-- About Section -->
+        <section id="about" class="py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <img src="{{ url_for('static', filename='omsd.jpg') }}" alt="Profile Image" class="w-40 h-40 rounded-full mx-auto shadow-lg mt-5 transition-transform duration-500 hover:scale-105">
+                <h2 class="text-4xl font-semibold mt-10">About Me</h2>
+                <p class="mt-4 text-lg">I am a DevOps Engineer and Cloud Specialist with a passion for creating scalable and efficient infrastructure solutions. I have a strong background in AWS, Docker, Kubernetes, and CI/CD tools, and I am eager to bring my skills to innovative projects.</p>
+            </div>
+        </section>
 
-        <h2>Projects</h2>
-        <div class="project">
-            <b>Cost Optimization — AWS</b><br>
-            Implemented Lambda function that fetches all EBS snapshots owned by the same account ('self') and also retrieves a list of active EC2 instances (running and stopped). For each snapshot, it checks if the associated volume (if exists) is not associated with any active instance. If it finds a stale snapshot, it deletes it, effectively optimizing storage costs.
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-semibold text-center">Skills</h2>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Skill Card -->
+                    <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold">AWS Cloud Services</h3>
+                        <p class="mt-2">Experienced in deploying, managing, and scaling applications using AWS infrastructure.</p>
+                    </div>
+                    <!-- Add more skill cards similarly -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-semibold text-center">Projects</h2>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project Card -->
+                    <div class="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md transition-colors duration-300">
+                        <h3 class="text-xl font-semibold">Cost Optimization — AWS</h3>
+                        <p class="mt-2">Implemented a Lambda function to identify and delete unused EBS snapshots, reducing storage costs significantly.</p>
+                    </div>
+                    <!-- Add more project cards similarly -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-semibold">Contact Me</h2>
+                <p class="mt-4 text-lg">Interested in collaborating or have job opportunities? <a href="mailto:omnagare07@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">Contact me</a> or connect on <a href="https://www.linkedin.com/in/om-nagare-620b90256/" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">LinkedIn</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-white text-center">
+        <div class="max-w-2xl mx-auto">
+            <p>&copy; 2024 Om Nagare. All Rights Reserved.</p>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/om-nagare-620b90256/" target="_blank" class="text-blue-500 hover:text-white transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
         </div>
-        <div class="project">
-            <b>End CICD Implementation— Jenkins</b><br>
-            Implemented an end-to-end CI/CD pipeline for java-based application using Jenkins declarative pipelines which includes various stages such as Build, Unit testing, Static code analysis, SAST, DAST, Creation of Docker Images, Deployment on Kubernetes platform using Argo CD.
-        </div>
-        <div class="project">
-            <b>Deployed Two Tire Application</b><br>
-            Dockerized a Flask and MySQL application, setting up Kubernetes clusters locally and on AWS EKS for fault tolerance. Automated cluster setup with Kubeadm and eksctl, deployed with HELM, achieving 10,000 user scalability and 60% downtime reduction using AWS Managed Services
-        </div>
+    </footer>
 
-        <h2 class="contact">Contact Me</h2>
-        <p class="contact">If you would like to get in touch with me regarding internship opportunities or collaboration, please feel free to <a href="mailto:omnagare07@gmail.com">contact me</a>.</p>
-    </div>
-
-   
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            if (document.body.classList.contains('dark-mode')) {
+                themeSwitcher.textContent = '☀️'; // Sun icon for light mode
+            } else {
+                themeSwitcher.textContent = '🌙'; // Moon icon for dark mode
+            }
+        }
+    </script>
 </body>
+
 </html>
+
